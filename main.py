@@ -19,7 +19,7 @@ def fetch_weather_data(station_id, year, month, day, timeframe):
 
 def write_to_excel(data_frame):
     grouped_data = data_frame.groupby("Year")
-    excel_writer = pd.ExcelWriter("C:/cygwin64/home/H336013/filtered_weather_data.xlsx", engine="xlsxwriter")
+    excel_writer = pd.ExcelWriter("C:/Users/H336013/PycharmProjects/WeatherData/filtered_weather_data.xlsx", engine="xlsxwriter")
 
     for year, group in grouped_data:
         group.to_excel(excel_writer, sheet_name=str(year), index=False)
